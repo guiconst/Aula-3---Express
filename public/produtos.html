@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Padaria Doce Sabor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Padaria Doce Sabor</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+
+            <div id="form-adicionar-produto">
+                <h3>Adicionar Novo Produto</h3>
+                <form id="add-produto-form">
+                    <input type="text" id="add-nome" placeholder="Nome do produto" required>
+                    <input type="text" id="add-categoria" placeholder="Categoria" required>
+                    <input type="number" id="add-preco" placeholder="Preço" step="0.01" required>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+
+            <div id="filtros">
+                <label for="categoria-filtro">Filtrar por categoria:</label>
+                <select id="categoria-filtro">
+                    <option value="todos">Todas</option>
+                </select>
+            </div>
+            <div id="lista-produtos"></div>
+        </section>
+
+        <!-- Modal de Edição -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Editar Produto</h3>
+                <form id="edit-produto-form">
+                    <input type="hidden" id="edit-id">
+                    <input type="text" id="edit-nome" required>
+                    <input type="text" id="edit-categoria" required>
+                    <input type="number" id="edit-preco" step="0.01" required>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/produtos.js"></script>
+</body>
+</html>
